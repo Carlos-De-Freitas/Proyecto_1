@@ -7,7 +7,7 @@ package proyecto1;
 
 /**
  *
- * @author drali
+ * @author Carlos
  */
 public class Proyecto1 {
 
