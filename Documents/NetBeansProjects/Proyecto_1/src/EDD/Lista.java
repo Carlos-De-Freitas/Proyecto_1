@@ -26,7 +26,7 @@ public class Lista {
         return getFirst() == null; 
     }
     
-    public void empty() {
+    public void Empty() {
         this.setFirst(null); 
         this.setLast(null); 
         this.setSize(0); 
