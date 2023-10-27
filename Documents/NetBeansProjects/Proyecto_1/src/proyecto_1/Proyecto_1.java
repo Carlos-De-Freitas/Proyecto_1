@@ -5,6 +5,8 @@
  */
 package proyecto_1;
 
+import ventana.ClaseFrame;
+
 /**
  *
  * @author drali
@@ -19,6 +21,8 @@ public class Proyecto_1 {
         
         int numNodos = 10; 
         
+        ClaseFrame miVentana = new ClaseFrame();
+		miVentana.setVisible(true);
     }
     
 }

@@ -1,0 +1,67 @@
+ ˛∫æ   2 ˘   ventana/ClaseFrame   javax/swing/JFrame   java/awt/event/ActionListener 
+contenedor Ljava/awt/Container; 
+labelTitulo Ljavax/swing/JLabel; 
+areaDeTexto Ljavax/swing/JTextArea; 
+botonAbrir Ljavax/swing/JButton; botonGuardar scrollPaneArea Ljavax/swing/JScrollPane; 
+fileChooser Ljavax/swing/JFileChooser; texto Ljava/lang/String; <init> ()V Code
+    
+     getContentPane ()Ljava/awt/Container;	      
+ " $  # java/awt/Container % & 	setLayout (Ljava/awt/LayoutManager;)V  ( javax/swing/JFileChooser
+ ' 	  +    - javax/swing/JLabel
+ , 	  0 	 
+ 2 COMPONENTE JFILECHOOSER
+ , 4 5 6  setText (Ljava/lang/String;)V
+ , 8 9 : 	setBounds  (IIII)V  < javax/swing/JTextArea
+ ; 	  ? 
+ 
+ ; A B C 
+setLineWrap (Z)V
+ ; E F C setWrapStyleWord  H javax/swing/JScrollPane
+ G 	  K  
+ G 8
+ G N O P setViewportView (Ljava/awt/Component;)V  R javax/swing/JButton
+ Q 	  U 
+  W Abrir
+ Q 4
+ Q 8
+ Q [ \ ] addActionListener "(Ljava/awt/event/ActionListener;)V	  _   a  Guardar
+ " c d e add *(Ljava/awt/Component;)Ljava/awt/Component; g CoDejaVu : Ventana JFileChooser
+  i j 6 setTitle
+  l m n  setSize (II)V
+  p q P setLocationRelativeTo
+  s t u setDefaultCloseOperation (I)V LineNumberTable LocalVariableTable this Lventana/ClaseFrame; actionPerformed (Ljava/awt/event/ActionEvent;)V
+ }   ~ java/awt/event/ActionEvent Ä Å 	getSource ()Ljava/lang/Object;
+  É Ñ Ö abrirArchivo ()Ljava/lang/String;
+ ; 4
+  à â  guardarArchivo evento Ljava/awt/event/ActionEvent;  archivo 
+StackMapTable è  	  ë  
+ ' ì î ï showOpenDialog (Ljava/awt/Component;)I
+ ' ó ò ô getSelectedFile ()Ljava/io/File;  õ java/io/FileReader
+ ö ù  û (Ljava/io/File;)V  † java/io/BufferedReader
+ ü ¢  £ (Ljava/io/Reader;)V  • java/lang/StringBuilder
+ ß ©  ® java/lang/String ™ ´  valueOf &(Ljava/lang/Object;)Ljava/lang/String;
+ § ≠  6
+ § Ø ∞ ± append -(Ljava/lang/String;)Ljava/lang/StringBuilder; ≥ 
+
+ § µ ∂ Ö toString
+ ü ∏ π Ö readLine
+ ü ª º  close
+ § 
+ § ø ∞ ¿ -(Ljava/lang/Object;)Ljava/lang/StringBuilder; ¬ 
+No se ha encontrado el archivo ƒ ADVERTENCIA!!!
+ ∆ »  « javax/swing/JOptionPane …   showMessageDialog <(Ljava/awt/Component;Ljava/lang/Object;Ljava/lang/String;I)V  Ã java/io/IOException aux abre Ljava/io/File; archivos Ljava/io/FileReader; lee Ljava/io/BufferedReader; ex Ljava/io/IOException;  ◊ java/io/File
+ ' Ÿ ⁄ ï showSaveDialog
+ ÷ ‹ › Ö  getName  ﬂ java/io/FileWriter · .txt
+ ﬁ ≠
+ ; ‰ Â Ö  getText
+ ﬁ Á Ë 6 write
+ ﬁ ª Î %El archivo se a guardado Exitosamente Ì Informaci√≥n Ô Su archivo no se ha guardado Ò 
+Advertencia nombre file guarda save Ljava/io/FileWriter; 
+SourceFile ClaseFrame.java !              	 
+     
+      
+                                   «    )*∑ **∂ µ *¥ ∂ !*ª 'Y∑ )µ **ª ,Y∑ .µ /*¥ /1∂ 3*¥ /n ¥∂ 7*ª ;Y∑ =µ >*¥ >∂ @*¥ >∂ D*ª GY∑ Iµ J*¥ J2^∂ L*¥ J*¥ >∂ M*ª QY∑ Sµ T*¥ TV∂ X*¥ TdJP∂ Y*¥ T*∂ Z*ª QY∑ Sµ ^*¥ ^`∂ X*¥ ^ ‹JP∂ Y*¥ ^*∂ Z*¥ *¥ /∂ bW*¥ *¥ J∂ bW*¥ *¥ T∂ bW*¥ *¥ ^∂ bW*f∂ h*êê∂ k*∂ o*∂ r±    v   z    '  )  *  -  1 * 2 3 3 C 5 N 7 V 9 ^ : i ; z < Ö @ ê A ô B © C ± E º F ≈ G ÷ H ﬁ K Í L ˆ M N P R T# V( W w      ) x y    z {     Ñ     (+∂ |*¥ T¶ *∑ ÇM*¥ >,∂ Ü+∂ |*¥ ^¶  *∑ á±    v       [ 
+ ]  ^  a # c ' e w        ( x y     ( ä ã    å   ç      Ñ Ö    \     ÖéL*éµ ê*¥ **∂ íW*¥ *∂ ñM,∆ eª öY,∑ úNª üY-∑ °:ß "*Y¥ êª §Z_∏ ¶∑ ¨+∂ Æ≤∂ Æ∂ ¥µ ê∂ ∑YL«ˇ⁄∂ ∫ß Mª §Y∑ Ω,∂ æ¡∂ Æ∂ ¥√∏ ≈*¥ ê∞  	 b e À  v   F    n  o 	 t  v  z  | ' } 1 ~ 4 Ä S ~ ] É e Ü f à r â z ä } à Ä å w   >    Ö x y    Ç Õ    K Œ œ  ' ; – —  1 1 “ ”  f  ‘ ’  ç   - ˇ 4     ß  ÷  ö  ü  ˘ ˇ      ß   À  â     4     féLª 'Y∑ )M,*∂ ÿW,∂ ñN-∆ N,∂ ñ∂ €Lª ﬁYª §Y∑ Ω-∂ æ‡∂ Æ∂ ¥∑ ‚:*¥ >∂ „∂ Ê∂ ÈÍÏ∏ ≈ß 
+LÓ∏ ≈±    X [ À  v   N    ó  ò 
+ ô  ö  ú  û " ° > ¢ J £ O § P • R ¶ U § [ © \ ´ ] ¨ _ ≠ b ´ e Ø w   >    f x y    X Ú   
+ P Û    E Ù œ  >  ı ˆ  \ 	 ‘ ’  ç    ˛ X  ß  '  ÷ˇ       À	  ˜    ¯
