@@ -78,7 +78,7 @@ public class ClaseFrame extends JFrame implements ActionListener
 			contenedor.add(botonGuardar);
        		//Asigna un titulo a la barra de titulo
 			setTitle("CoDejaVu : Ventana JFileChooser");
-			//tamaño de la ventana
+			//tamaÃ±o de la ventana
 			setSize(400,400);
 			//pone la ventana en el Centro de la pantalla
 			setLocationRelativeTo(null);
@@ -105,7 +105,7 @@ public class ClaseFrame extends JFrame implements ActionListener
 		 * archivos en el area de texto
 		 * @return
 		 */
-		private String abrirArchivo() {
+		public String abrirArchivo() {
 					
 			String aux=""; 		
 	 		texto="";
@@ -163,7 +163,7 @@ public class ClaseFrame extends JFrame implements ActionListener
 		 			save.close();
 		 			JOptionPane.showMessageDialog(null,
 		 					"El archivo se a guardado Exitosamente",
-		 					"Información",JOptionPane.INFORMATION_MESSAGE);
+		 					"InformaciÃ³n",JOptionPane.INFORMATION_MESSAGE);
 			    }
 	 		 }
 	 	   catch(IOException ex)

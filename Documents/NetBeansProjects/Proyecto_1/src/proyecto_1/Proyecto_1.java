@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 package proyecto_1;
-
-import ventana.ClaseFrame;
-
+ 
+import EDD.Usuarios;
+import EDD.Grafo; 
 /**
  *
  * @author drali
@@ -19,10 +19,20 @@ public class Proyecto_1 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        int numNodos = 10; 
+        Usuarios usuario = new Usuarios(); 
+        int Numnodos = Integer.parseInt(usuario.DefineNumNodos()); 
         
-        ClaseFrame miVentana = new ClaseFrame();
-		miVentana.setVisible(true);
+        Grafo graph = new Grafo(Numnodos); 
+        graph.printGraph();
+        
+    
+       
+
+
+
+
+//        ClaseFrame miVentana = new ClaseFrame();
+//		miVentana.setVisible(true);
     }
     
 }

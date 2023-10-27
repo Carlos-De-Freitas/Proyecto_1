@@ -11,7 +11,7 @@ package EDD;
  */
 public class Grafo {
     
-     Nodo[] nodos;
+     private Nodo[] nodos;
 
     public Grafo(Nodo[] nodos) {
         this.nodos = nodos;
@@ -28,7 +28,7 @@ public class Grafo {
     
     public void AddEdge(int SrcNode, int EndNode){
     Nodo nuevoNodo = new Nodo(EndNode); 
-//    nuevoNodo.getpNext() = nodos[SrcNode]; 
+    nuevoNodo.getpNext() = nodos[SrcNode]; 
     nodos[SrcNode] = nuevoNodo; 
     
     } 
