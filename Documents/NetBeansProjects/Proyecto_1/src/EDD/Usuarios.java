@@ -36,6 +36,31 @@ public class Usuarios {
         return Integer.toString(contadorUsuarios);
     } 
     
+    public Object[] UserNames(int NumUsers){
+       ClaseFrame info =  new ClaseFrame();
+       
+       String texto = info.abrirArchivo(); 
+       
+       String[] lineas = texto.split("\n");
+        boolean enUsuarios = false;
+        Lista NombreUsuarios = new Lista();
+
+        for (String linea : lineas) {
+            if (linea.equals("usuarios")) {
+                enUsuarios = true;
+            }
+
+            if (enUsuarios && linea.startsWith("@")) {
+                NombreUsuarios.Addtothefinal(linea);
+
+            }else if (linea.equals("relaciones")) {
+                enUsuarios = false;
+            }
+        } 
+        return NombreUsuarios.getAllInfo(NumUsers);
+
+    } 
+    
 } 
  
     

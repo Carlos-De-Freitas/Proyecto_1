@@ -106,7 +106,14 @@ public class Lista {
         this.size = size;
     }
     
-    
-    
-    
+    public Object[] getAllInfo(int size){ 
+        int i = 0;  
+        Nodo aux = pFirst; 
+        Object[] Elements = new Object[size];
+        for (i = 0; i<size ; i++){
+            Elements[i] = aux.getElement();
+            aux = pFirst.getpNext(); 
+        }
+        return Elements; 
+}
 }

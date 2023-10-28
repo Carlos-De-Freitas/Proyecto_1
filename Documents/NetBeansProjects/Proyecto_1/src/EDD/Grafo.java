@@ -28,14 +28,15 @@ public class Grafo {
     
     public void AddEdge(int SrcNode, int EndNode){
     Nodo nuevoNodo = new Nodo(EndNode); 
-    nuevoNodo.getpNext() = nodos[SrcNode]; 
+//    nuevoNodo.getpNext() = nodos[SrcNode]; 
     nodos[SrcNode] = nuevoNodo; 
     
     } 
     
-    public void printGraph(){ 
+    public void printGraph(Object[] UserNames){ 
         for (int i = 0; i < nodos.length; i++){      
             Nodo nodoActual = nodos[i];
+            nodoActual.setElement(UserNames[i]);
                 System.out.print("Nodo " + i + ": ");
                 while (nodoActual != null) {
                     System.out.print(nodoActual.getElement() + " -> ");

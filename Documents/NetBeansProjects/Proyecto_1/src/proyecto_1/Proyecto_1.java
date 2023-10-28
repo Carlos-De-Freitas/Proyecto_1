@@ -21,9 +21,10 @@ public class Proyecto_1 {
         
         Usuarios usuario = new Usuarios(); 
         int Numnodos = Integer.parseInt(usuario.DefineNumNodos()); 
+        Object[] UserNames = usuario.UserNames(Numnodos);
         
         Grafo graph = new Grafo(Numnodos); 
-        graph.printGraph();
+        graph.printGraph(UserNames);
         
     
        
