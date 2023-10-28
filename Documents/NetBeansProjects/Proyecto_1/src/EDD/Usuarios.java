@@ -11,11 +11,15 @@ import ventana.ClaseFrame;
  */
 public class Usuarios {
     
-    
-    public String DefineNumNodos(){
-       ClaseFrame info =  new ClaseFrame();
+    public String OpenTxt(){
+        ClaseFrame info =  new ClaseFrame();
        
        String texto = info.abrirArchivo(); 
+       
+       return texto;
+    }
+    
+    public String DefineNumNodos(String texto){
        
        String[] lineas = texto.split("\n");
         int contadorUsuarios = 0;
@@ -36,14 +40,10 @@ public class Usuarios {
         return Integer.toString(contadorUsuarios);
     } 
     
-    public Object[] UserNames(int NumUsers){
-       ClaseFrame info =  new ClaseFrame();
-       
-       String texto = info.abrirArchivo(); 
+    public Lista UserNames(String texto, Lista NombreUsuarios){ 
        
        String[] lineas = texto.split("\n");
         boolean enUsuarios = false;
-        Lista NombreUsuarios = new Lista();
 
         for (String linea : lineas) {
             if (linea.equals("usuarios")) {
@@ -57,7 +57,7 @@ public class Usuarios {
                 enUsuarios = false;
             }
         } 
-        return NombreUsuarios.getAllInfo(NumUsers);
+        return NombreUsuarios;
 
     } 
     

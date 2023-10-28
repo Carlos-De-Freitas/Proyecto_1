@@ -34,8 +34,9 @@ public class Grafo {
     } 
     
     public void printGraph(Object[] UserNames){ 
-        for (int i = 0; i < nodos.length; i++){      
-            Nodo nodoActual = nodos[i];
+        for (int i = 0; i < nodos.length; i++){ 
+            Nodo nodoActual = new Nodo(null);
+            nodos[i] = nodoActual;
             nodoActual.setElement(UserNames[i]);
                 System.out.print("Nodo " + i + ": ");
                 while (nodoActual != null) {

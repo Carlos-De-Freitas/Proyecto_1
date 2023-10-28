@@ -13,12 +13,12 @@ public class Lista {
     
     private Nodo pFirst; 
     private Nodo pLast; 
-    private int size; 
+    private int size;
 
     public Lista() {
         this.pFirst = null; 
         this.pLast = null; 
-        this.size = 0; 
+        this.size = 0;
     }
     
     //reconoce si la lista es vacia 
@@ -35,14 +35,15 @@ public class Lista {
     public void Addtothefinal(Object data) { 
         Nodo nuevo = new Nodo(data);  
         if (IsEmpty()){
-            pFirst = nuevo; 
+            pFirst = nuevo;
+            pLast = nuevo;
         }else{
             Nodo aux = pLast; 
-            aux.setpNext(nuevo);
-            pLast = nuevo;  
+            aux.setpNext(nuevo); 
+            pLast = nuevo;
+            
         }size +=1; 
     }
-    
     
     public void PrintList(){
         if (!IsEmpty()) { 
@@ -106,13 +107,12 @@ public class Lista {
         this.size = size;
     }
     
-    public Object[] getAllInfo(int size){ 
-        int i = 0;  
-        Nodo aux = pFirst; 
+    public Object[] getAllInfo(int size, Lista NombreUsuarios){ 
+        Nodo aux = NombreUsuarios.pFirst; 
         Object[] Elements = new Object[size];
-        for (i = 0; i<size ; i++){
+        for (int i = 0; i<size ; i++){
             Elements[i] = aux.getElement();
-            aux = pFirst.getpNext(); 
+            aux = aux.getpNext(); 
         }
         return Elements; 
 }
