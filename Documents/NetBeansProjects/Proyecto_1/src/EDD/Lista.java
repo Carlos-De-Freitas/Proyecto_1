@@ -32,7 +32,7 @@ public class Lista {
         this.setSize(0); 
     }
     
-    public void Addtothefinal(Object data) { 
+    public void addToTheFinal(Object data) { 
         Nodo nuevo = new Nodo(data);  
         if (IsEmpty()){
             pFirst = nuevo;
@@ -45,7 +45,7 @@ public class Lista {
         }size +=1; 
     }
     
-    public void PrintList(){
+    public void printList(){
         if (!IsEmpty()) { 
             Nodo aux = pFirst; 
             for (int i = 0; i < size; i++){ 
@@ -58,7 +58,7 @@ public class Lista {
             
     }
     
-    public void DeleteFirst() { 
+    public void deleteFirst() { 
         if (!IsEmpty()){ 
             pFirst = pFirst.getpNext(); 
             size = size - 1; 
