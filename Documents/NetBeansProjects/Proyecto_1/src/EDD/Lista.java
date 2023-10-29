@@ -101,7 +101,7 @@ public class Lista {
     }
 
     /**
-     * @param size the size to set
+     * @param size the siM[etodo ze to set
      */
     public void setSize(int size) {
         this.size = size;

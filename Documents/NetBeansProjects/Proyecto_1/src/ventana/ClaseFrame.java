@@ -47,7 +47,7 @@ public class ClaseFrame extends JFrame implements ActionListener
 			/*Propiedades del Label, lo instanciamos, posicionamos y
 			 * activamos los eventos*/
 			labelTitulo= new JLabel();
-			labelTitulo.setText("COMPONENTE JFILECHOOSER");
+			labelTitulo.setText("         CARGAR ARCHIVO");
 			labelTitulo.setBounds(110, 20, 180, 23);
 			
 			areaDeTexto = new JTextArea();
@@ -78,6 +78,7 @@ public class ClaseFrame extends JFrame implements ActionListener
 			contenedor.add(botonGuardar);
        		//Asigna un titulo a la barra de titulo
 			setTitle("CoDejaVu : Ventana JFileChooser");
+			setTitle("Cargar Archivo");
 			//tamaño de la ventana
 			setSize(400,400);
 			//pone la ventana en el Centro de la pantalla
@@ -163,6 +164,7 @@ public class ClaseFrame extends JFrame implements ActionListener
 		 			save.close();
 		 			JOptionPane.showMessageDialog(null,
 		 					"El archivo se a guardado Exitosamente",
+
 		 					"Información",JOptionPane.INFORMATION_MESSAGE);
 			    }
 	 		 }
